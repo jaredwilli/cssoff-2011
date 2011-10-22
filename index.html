@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-body { width: 960px; }
 
 
 </style>
@@ -25,106 +24,119 @@ body { width: 960px; }
 </head>
 <body>
 	
-	<div role="container">
-		<header>
-			<nav>
-				<ul>
-					<li><a href="#obstacles">Obstacles</a></li>
-					<li><a href="#prizes">Prizes</a></li>
-					<li><a href="#contestants">Be A Contestant</a></li>
-					<li><a href="#home">Back To Top</a></li>
-				</ul>
-			</nav>
+	<div id="container" role="main">
+		<nav>
+			<ul>
+				<li><a href="#obstacles">Obstacles</a></li>
+				<li><a href="#prizes">Prizes</a></li>
+				<li><a href="#contestants">Be A Contestant</a></li>
+				<li><a href="#home">Back To Top</a></li>
+			</ul>
+		</nav>
+		
+		<header id="home">
+			<div class="page">
+				<h1><a href="#home">Triple Dare</a></h1>
+				<h2>The Web's Messiest Challenge!</h2>
+				<h3>Airing Thursays on the Knucklelodeon Network<sup>TM</sup></h3>
+			</div>
 		</header>
 		
-		<section id="home">
-			 <h1>The Web's Messiest Challenge!</h1>
-			 <h3>Airing Thursays on the Knucklelodeon Network<sup>TM</sup></h3>
-		</section>
-		
 		<section id="obstacles">
-			<h1>Obstacles</h1>
-			
-			<ul>
-				<li>The Tank</li>
-				<li>The Tank</li>
-				<li>The Tank</li>
-				<li>The Tank</li>
-				<li>The Tank</li>
-				<li>The Tank</li>
-		 	</ul>
-			
-			
+			<div class="page">
+				<h1>Obstacles</h1>
+				
+				<ul>
+					<li id="tank"><a href="#tank"><img src="img/obstacle-tank.png" /><span>The Tank</span></a></li>
+					<li id="slide"><a href="#slide"><img src="img/obstacle-slide.png" /><span>Sundae Slide</span></a></li>
+					<li id="wheel"><a href="#wheel"><img src="img/obstacle-wheel.png" /><span>Human Hamster Wheel</span></a></li>
+					<li id="hatch"><a href="#hatch"><img src="img/obstacle-hatch.png" /><span>Down The Hatch</span></a></li>
+					<li id="pinkit"><a href="#pickit"><img src="img/obstacle-pickit.png" /><span>Pick It!</span></a></li>
+					<li id="wringer"><a href="#wringer"><img src="img/obstacle-wringer.png" /><span>The Wringer</span></a></li>
+				</ul>
+				
+				<div id="lg-obstacle"></div>
+				
+			</div>			
 		</section>
 			
 		<section id="prizes">
-			<h1>Prizes</h1>
-			
-			<ul>
-				<li><img src="" />A Trip To Space Camp!</li>
-				<li><img src="" />A Nash Skateboard!</li>
-				<li><img src="" />A Casio Rapman Keyboard!</li>
-				<li><img src="" />A 13 Inch TV/VCR Combo!</li>
-			</ul>
-			
+			<div class="page">
+				<h1>Prizes</h1>
+				
+				<ul>
+					<li><img src="img/prize-spacecamp.png" /><span>A Trip To Space Camp!</span></li>
+					<li><img src="img/prize-skateboard.png" /><span>A Nash Skateboard!</span></li>
+					<li><img src="img/prize-keyboard.png" /><span>A Casio Rapman Keyboard!</span></li>
+					<li><img src="img/prize-tv.png" /><span>A 13 Inch TV/VCR Combo!</span></li>
+				</ul>
+				
+			</div>
 		</section>
 	
 		<section id="contestants">
-			<h1>Be A Contestant</h1>
-			
-			<form id="join" name="join">
-				<input type="text" id="name" placeholder="Your Name" required>
-				<input type="email" id="email" placeholder="Email Address" required>
-				<input type="text" id="team-name" placeholder="Team Name" required>
-				<input type="color" id="team-color" placeholder="Team Color" required>
-				<input type="text" id="gender" placeholder="Gender" required>
-				<input type="url" id="photo-url" placeholder="Profile Photo URL" required>
-				<button></button>
-			</form>
-			
-			<div class="clock">
-				The Clock is Ticking!
+			<div class="page">
+				<h1>Be A Contestant</h1>
+				
+				<form id="join" name="join">
+					<input type="text" id="name" placeholder="Your Name" required>
+					<input type="email" id="email" placeholder="Email Address" required>
+					<input type="text" id="team-name" placeholder="Team Name" required>
+					<input type="color" id="team-color" placeholder="Team Color" required>
+					<input type="text" id="gender" placeholder="Gender" required>
+					<input type="url" id="photo-url" placeholder="Profile Photo URL" required>
+					<button></button>
+				</form>
+				
+				<h1>
+					The Clock is Ticking!
+				</h1>
+				
 			</div>
-			
 		</section>
 		
 		<footer>
-			<h2>The Knucklelodeon Network</h2>
-			
-			<p class="left">
-				The Knucklelodeon Network is not affiliated<br />
-				with Nicklelodeon, not is it an actual<br />
-				television network.
-			</p>
-			   
-		 	<p class="right">
-		 		Triple Dare contestants consent to potential<br />
-		 		physical bodily harm, like being burried<br />
-		 		alive by a giant waffle.
-	 		</p>
-	 		
-		 	<h2>Visit Our Studios</h2>
-		 	
-		 	<p class="left">
-		 		11 Slime Time Way<br />
-		 		Sacramento, CA 94303
-		 	</p>
-		 	
-		 	<p class="right">
-		 		329 Gunk Road<br />
-		 		Jacksonville, FL 32099
-		 	</p>
+			<div class="page">
+	
+				<h2>The Knucklelodeon Network</h2>
+				
+				<p class="left">
+					The Knucklelodeon Network is not affiliated<br />
+					with Nicklelodeon, not is it an actual<br />
+					television network.
+				</p>
+				   
+				<p class="right">
+					Triple Dare contestants consent to potential<br />
+					physical bodily harm, like being burried<br />
+					alive by a giant waffle.
+				</p>
+				
+				<h2>Visit Our Studios</h2>
+				
+				<p class="left">
+					11 Slime Time Way<br />
+					Sacramento, CA 94303
+				</p>
+				
+				<p class="right">
+					329 Gunk Road<br />
+					Jacksonville, FL 32099
+				</p>
+				
+			</div>
 		</footer>
 		
 		<aside>
-			<p>This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</p>
-			<a href=""><img src="" /></a>
+			<div class="page">
+				<p>This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</p>
+				<a href=""><img src="" /></a>
+			</div>
 		</aside>
 	
 	</div><!--// container -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.6.4.min.js"><\/script>')</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
 	<script defer src="js/plugins.js"></script>
 	<script defer src="js/script.js"></script>
