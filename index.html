@@ -78,25 +78,36 @@
 				<h1>Be A Contestant</h1>
 				<div class="checks"></div>
 				
-				<form id="join" name="join">
-					<input type="text" id="name" placeholder="Your Name" required>
-					<input type="email" id="email" placeholder="Email Address" required>
-					<input type="text" id="team-name" placeholder="Team Name" required>
-					<input type="color" id="team-color" placeholder="Team Color" required>
-					<input type="text" id="gender" placeholder="Gender" required>
-					<input type="url" id="photo-url" placeholder="Profile Photo URL" required>
-					<button></button>
-				</form>
+				<div class="left">
+					<form id="join" name="join">
+						<label for="name">Your Name</label>
+							<input type="text" id="name" name="name" placeholder="Your Name" required>
+						<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" placeholder="Email Address" required>
+						<label for="team-name">Team Name</label>
+							<input type="text" id="team-name" name="team-name" placeholder="Team Name" required>
+						<label for="team-color">Team Color</label>
+							<input type="color" id="team-color" name="team-color" placeholder="Team Color" required>
+						<label for="gender">Gender</label>
+							<input type="text" id="gender" name="gender" placeholder="Gender" required>
+						<label for="photo-url">Profile Photo URL</label>
+							<input type="url" id="photo-url" name="photo-url" placeholder="Profile Photo URL" required>
+						<button id="submit" name="submit"></button>
+					</form>
+				</div>
 				
-				<h1>
-					The Clock is Ticking!
-				</h1>
+				<div class="right">
+					<div class="counter"></div>
+				
+					<h1>The Clock is Ticking!</h1>
+				</div>
 				
 			</div>
 		</section>
 		
 		<footer>
 			<div class="page">
+				<div class="kn">KN</div>
 	
 				<h2>The Knucklelodeon Network</h2>
 				

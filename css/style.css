@@ -138,7 +138,7 @@ header, section {
 	overflow: hidden;
 }
 
-header .page, section .page, footer .page {
+header .page, section .page, footer {
 	width: 960px;
 	margin: 0 auto;
 	position: relative;
@@ -284,13 +284,79 @@ section, footer {
 	background: none;
 }
 
-form {
-	width: 330px;
+#contestants form {
+	width: 425px;
 	float: left;
+}
+
+#contestants form label {
+	text-indent: -99999px;
+	display: none;
+}
+
+#contestants .page input {
+	background: #fe6336;
+	color: #fff;
+	padding: 10px;
+	margin: 9px 0;
+	font-size: 16px;
+	font-family: KomikaTitle-PaintRegular, Arial, Helvetica, sans-serif;
+}
+
+#contestants form #name, #contestants form #email, 
+#contestants form #team-name, #contestants form #photo-url {
+	width: 380px
+}
+
+#contestants form #team-color {
+	width: 210px;
+	margin-right: 20px;
+	float: left;
+}
+#contestants form #gender {
+	width: 125px;
+	float: left;
+}
+
+#contestants .right h1 {
+	width: 250px;
+	display: inline-block;
 }
 
 footer {
 	
+}
+
+footer .page {
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 520px;
+}
+
+footer .kn {
+	background: url(../img/bg-kn.png) no-repeat 0 0;
+	position: relative;
+	margin: 0 auto;
+	font-size: 50px;
+	font-family: KomikaTitle-PaintRegular, Arial, Helvetica, sans-serif;
+	text-align: center;
+	width: auto;
+	display: inline-block;
+}
+
+footer h2 {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+footer .left {
+	float: left;
+	text-align: right;
+}
+
+footer .right {
+	float: right;
 }
 
 aside {
