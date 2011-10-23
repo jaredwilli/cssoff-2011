@@ -3,9 +3,25 @@
  */
  
 CSSOFF = {
-	init: function(){
-
-	}	
+	common: {
+		init: function(){
+			var navItem = $('nav li a');
+			
+			navItem.click(function(e) {
+				console.log($(this).attr('href').slice(1));
+				var linkHref = $(this).attr('href').slice(1);
+				CSSOFF.common.scroll(linkHref);
+				e.preventDefault();
+			});
+			
+		},
+		scroll: function(elem) {
+			console.log($('#'+elem));
+			
+			var el = $('#'+elem);
+			$(window).animate({ scrollTop: el.position().top }, 500);
+		}
+	}
 }
 UTIL = {
 	fire : function(func,funcname, args){
