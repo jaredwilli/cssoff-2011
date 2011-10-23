@@ -3,28 +3,23 @@
  */
  
 CSSOFF = {
-	common: {
+	c: {
 		init: function(){
-			var navItem = $('nav li a');
-			
-			navItem.click(function(e) {
-				console.log($(this).attr('href').slice(1));
-				var linkHref = $(this).attr('href').slice(1);
-				CSSOFF.common.scroll(linkHref);
+			var n = $('nav li a');
+			n.click(function(e) {
+				var l = $(this).attr('href').slice(1);
+				CSSOFF.c.s(l);
 				e.preventDefault();
 			});
-			
 		},
-		scroll: function(elem) {
-			console.log($('#'+elem));
-			
-			var el = $('#'+elem);
-			$(window).animate({ scrollTop: el.position().top }, 500);
+		s: function(a) {
+			var e = $('#'+a);
+			$('html, body').animate({ scrollTop: e.position().top }, 500);
 		}
 	}
 }
 UTIL = {
-	fire : function(func,funcname, args){
+	fire : function(func,funcname,args){
 		var namespace = CSSOFF;
 		funcname = (funcname === undefined) ? 'init' : funcname;
 		if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
@@ -34,13 +29,13 @@ UTIL = {
 	loadEvents : function(){
 		var bodyId = document.body.id;
 		// hit up common first.
-		UTIL.fire('common');
+		UTIL.fire('c');
 		// do all the classes too.
 		$.each(document.body.className.split(/\s+/),function(i,classnm){
 			UTIL.fire(classnm);
 			UTIL.fire(classnm,bodyId);
 		});
-		UTIL.fire('common','finalize');
+		UTIL.fire('c','finalize');
 	} 
 }; 
 // kick it all off here 

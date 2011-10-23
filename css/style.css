@@ -228,6 +228,10 @@ section, footer {
 	background-position: 259px 8px;
 }
 
+#obstacles ul {
+	list-style: none;
+	width: 525px;
+}
 #obstacles ul li {
 	height: 355px;
 	width: 220px;
