@@ -15,6 +15,13 @@ CSSOFF = {
 		s: function(a) {
 			var e = $('#'+a);
 			$('html, body').animate({ scrollTop: e.position().top }, 500);
+			e.addClass('active');
+		},
+		t: function(a) {
+			var num = $('#contestants .counter span').text()
+			for (var i = 0; i < num; i++) {
+				num -= 1;
+			}
 		}
 	}
 }
