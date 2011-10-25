@@ -2,7 +2,7 @@
  * Author: Jared Williams
  */
  
-var CSSOFF = {
+CSSOFF = {
 	c: {
 		init: function(){
 			var n = $('nav li a'),
@@ -41,18 +41,15 @@ var CSSOFF = {
 			$('html, body').animate({ scrollTop: e.position().top }, 500);
 			e.addClass('active');
 		},
-		t: function(m) {
-			//var num = $('#contestants .counter span').text()
-			if (m <= -1) {
-				m += 1 
-			} else {
-				$('#contestants .counter span').text(m);
-				setTimeout('CSSOFF.c.t("m")', 100) 
-			} 
+		t: function(a) {
+			var num = $('#contestants .counter span').text()
+			for (var i = 0; i < num; i++) {
+				num -= 1;
+			}
 		}
 	}
 };
-var UTIL = {
+UTIL = {
 	fire : function(func,funcname,args){
 		var namespace = CSSOFF;
 		funcname = (funcname === undefined) ? 'init' : funcname;
