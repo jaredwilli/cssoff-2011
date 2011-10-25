@@ -114,10 +114,11 @@ section h1 {
 	font-size: 40px;
 	font-family: KomikaTitle-Regular, Arial, Helvetica, sans-serif;
 	text-shadow: 2px 2px rgba(0,0,0,0.2), 4px 4px rgba(0,0,0,0.2);
-	background-image: url(../img/checks.png);
+	background-image: url(../img/sprite-imgs.png);
 	background-repeat: no-repeat;
 	display: block;
 	width: auto;
+	letter-spacing: 1.8px;
 }
 
 section, footer {
@@ -131,7 +132,7 @@ section, footer {
 #home .page { height: 714px; }
 
 #home h1 {
-	background: url(../img/logo.png) no-repeat 0 0;
+	background: url(../img/sprite-imgs.png) no-repeat right 0px;
 	width: 502px;
 	height: 449px;
 	display: inline-block;
@@ -172,7 +173,7 @@ section, footer {
 
 #obstacles { background: #fe6638 url(../img/noise-orange.png) repeat; }
 #obstacles .page { }
-#obstacles h1 { background-position: 259px 8px; }
+#obstacles h1 { background-position: 278px bottom; }
 
 #obstacles ul {
 	list-style: none;
@@ -239,7 +240,7 @@ section, footer {
 
 #prizes { background: #80b238 url(../img/noise-green.png) repeat; }
 #prizes .page { }
-#prizes h1 { background-position: 180px 8px; }
+#prizes h1 { background-position: 186px bottom; }
 
 #prizes ul {
 	width: 100%;
@@ -265,7 +266,7 @@ section, footer {
 /* Contestants */
 
 #contestants { border-bottom: none; }
-#contestants h1 { background-position: 420px 8px; }
+#contestants h1 { background-position: 439px bottom; }
 #contestants h1:last-child { background: none; }
 
 #contestants form {
@@ -322,7 +323,7 @@ section, footer {
 }
 
 #contestants form #submit {
-	background: url(../img/submit.png) no-repeat center center;
+	background: url(../img/sprite-imgs.png) no-repeat 0 -350px;
 	border: none;
 	width: 228px;
 	height: 155px;
@@ -347,7 +348,7 @@ section, footer {
 #contestants .counter {
 	width: 398px;
 	height: 336px;
-	background: url(../img/bg-counter.png) no-repeat center;
+	background: url(../img/sprite-imgs.png) no-repeat 0 0;
 	color: #f5eb00;
 	font-family: DigitaldreamFat, courier, monotype;
 	text-shadow: 1px 1px 0 #000, 3px 3px 0 #000, 5px 5px 0 #000;
@@ -384,7 +385,7 @@ footer .page {
 }
 
 footer .kn {
-	background: url(../img/bg-kn.png) no-repeat center;
+	background: url(../img/sprite-imgs.png) no-repeat -264px -384px;
 	position: relative;
 	margin: 0 auto;
 	font-size: 50px;
