@@ -267,7 +267,6 @@ section, footer {
 
 #contestants { border-bottom: none; }
 #contestants h1 { background-position: 439px bottom; }
-#contestants h1:last-child { background: none; }
 
 #contestants form {
 	width: 425px;
@@ -345,6 +344,15 @@ section, footer {
 	display: inline-block;
 }
 
+#contestants .right h1 {
+	background: none;
+	letter-spacing: normal; 
+	width: 250px;
+	display: block;
+	text-align: center;
+	margin: 10px auto;
+}
+
 #contestants .counter {
 	width: 398px;
 	height: 336px;
@@ -362,13 +370,6 @@ section, footer {
 	text-align: center;
 	position: relative;
 	top: 90px;
-}
-
-#contestants .right h1 {
-	width: 250px;
-	display: block;
-	text-align: center;
-	margin: 10px auto;
 }
 
 
