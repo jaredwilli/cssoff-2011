@@ -30,6 +30,19 @@ var CSSOFF = {
 				CSSOFF.c.a.t();
 			}
 			CSSOFF.c.a.t();
+			
+			/* IE8 Doesn't support coolness */
+			$('#prizes li:last-child').css({ top: '-145px' });
+			$('#prizes li:nth-child(3)').css({ top: '60px' });
+			
+			var z = $('form label');
+			for(var i = 0; i < z.length; i++) { 
+				var a = z[i],
+			  		b = $(a).attr('for'),
+					c = $('input').attr('name', b);
+				console.log($(a).text())
+				c.val($(a).text());
+			}
 		},
 		
 		o: function(x) {
@@ -49,10 +62,12 @@ var CSSOFF = {
 			t: function() {
 				$('.counter span').text(this.sec);
 				this.sec -= 1;
-				if (this.sec > -1) {
+				if (this.sec >= 0) {
 					setTimeout(function() {
 						CSSOFF.c.a.t(); // lolcat
 					}, 1000);
+				} else {
+					$('#contestants .right h1').text('Times Up! Game Over');
 				}
 			}
 		}

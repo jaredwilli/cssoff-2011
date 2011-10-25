@@ -132,7 +132,7 @@ section, footer {
 #home .page { height: 714px; }
 
 #home h1 {
-	background: url(../img/sprite-imgs.png) no-repeat right 0px;
+	background: url(../img/sprite-imgs.png) no-repeat 12px -348px;
 	width: 502px;
 	height: 449px;
 	display: inline-block;
@@ -172,8 +172,8 @@ section, footer {
 /* Obstacles */
 
 #obstacles { background: #fe6638 url(../img/noise-orange.png) repeat; }
-#obstacles .page { }
-#obstacles h1 { background-position: 278px bottom; }
+
+#obstacles h1 { background-position: 280px bottom; }
 
 #obstacles ul {
 	list-style: none;
@@ -186,7 +186,7 @@ section, footer {
 #obstacles li {
 	background: #80B238 url(../img/noise-green.png) repeat;
 	width: 190px;
-	height: 221px;
+	height: 211px;
 	overflow: hidden;
 	display: inline-block;
 	margin: 8px;
@@ -229,9 +229,8 @@ section, footer {
 }
 
 
-<<<<<<< HEAD
 #lg-obstacle ul li, #lg-obstacle ul li:hover {
-	background: url(../img/bg-slime.png) no-repeat center;
+	background: url(../img/sprite-imgs.png) no-repeat -246px -817px;
 	width: 400px;
 	height: 190px;
 	display: none;
@@ -249,7 +248,9 @@ section, footer {
 	position: relative;
 	text-align: center;
 	display: block;
-	
+	text-transform: uppercase;
+	text-shadow: 2px 2px 0 rgba(30,30,30,0.3), 4px 4px 0 rgba(30,30,30,0.3);
+
 	-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
 	-webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
 	-o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
@@ -260,6 +261,9 @@ section, footer {
 #lg-obstacle ul li h2 {
 	font-size: 40px;
 	top: 10px;
+}
+#lg-obstacle ul li h3 {
+	font-size: 22px;
 }
 
 #lg-obstacle div {
@@ -281,7 +285,7 @@ section, footer {
 /* Prizes */
 
 #prizes { background: #80b238 url(../img/noise-green.png) repeat; }
-#prizes .page { }
+
 #prizes h1 { background-position: 186px bottom; }
 
 #prizes ul {
@@ -299,7 +303,7 @@ section, footer {
 	text-align: center;
 	margin: 20px 50px;
 	vertical-align: text-top;
-	float: left;
+	position: relative;
 }
 
 #prizes li img { clear: both; }
@@ -308,7 +312,8 @@ section, footer {
 /* Contestants */
 
 #contestants { border-bottom: none; }
-#contestants h1 { background-position: 439px bottom; }
+
+#contestants h1 { background-position: 441px bottom; }
 
 #contestants form {
 	width: 425px;
@@ -364,7 +369,7 @@ section, footer {
 }
 
 #contestants form #submit {
-	background: url(../img/sprite-imgs.png) no-repeat 0 -350px;
+	background: url(../img/sprite-imgs.png) no-repeat 15px -823px;
 	border: none;
 	width: 228px;
 	height: 155px;
@@ -373,6 +378,16 @@ section, footer {
 	margin: 0 0 150px 0;
 	left: 90px;
 	position: relative;
+	font-size: 26px;
+	font-family: KomikaTitle-Regular, Arial, Helvetica, sans-serif;
+	text-shadow: 2px 2px 0 rgba(30,30,30,0.3), 4px 4px 0 rgba(30,30,30,0.3);
+	color: #fff;
+
+	-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
+	-webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
+	-o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
+	-ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);
+	transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-6deg, -6deg);	
 }
 
 #contestants .left {
@@ -428,7 +443,7 @@ footer .page {
 }
 
 footer .kn {
-	background: url(../img/sprite-imgs.png) no-repeat -264px -384px;
+	background: url(../img/sprite-imgs.png) no-repeat 20px -1006px;
 	position: relative;
 	margin: 0 auto;
 	font-size: 50px;
