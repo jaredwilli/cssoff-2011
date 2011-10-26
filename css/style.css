@@ -360,15 +360,38 @@ section, footer {
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-#contestants form #team-color {
-	width: 210px;
-	margin-right: 20px;
+#contestants form div {
+	position: relative;
 	float: left;
+	font-size: 16px;
+	font-family: KomikaTitle-Regular, Arial, Helvetica, sans-serif;
 }
 
-#contestants form #gender {
-	width: 125px;
-	float: left;
+#contestants form select.select {
+    position: relative;
+    z-index: 10;
+}
+
+#team-color select { width: 225px; display: inline-block; }
+#team-color span.select {
+	background: url(../img/sprite-imgs.png) no-repeat -6px -1008px;
+	position: absolute;
+	bottom: 9px;
+	right: 0;
+	z-index: 10;
+	width: 220px;
+	height: 50px;
+}
+
+#gender select { width: 155px; left: 20px; }
+#gender span.select {
+	background: url(../img/sprite-imgs.png) no-repeat -75px -1008px;
+	position: absolute;
+	bottom: 9px;
+	z-index: 10;
+	width: 151px;
+	height: 50px;
+	left: 24px;
 }
 
 #contestants form #submit {
