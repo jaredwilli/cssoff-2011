@@ -306,7 +306,10 @@ section, footer {
 	position: relative;
 }
 
-#prizes li img { clear: both; }
+#prizes li span {
+	position: relative;
+	top: 15px;
+}
 
 
 /* Contestants */
@@ -369,7 +372,7 @@ section, footer {
 }
 
 #contestants form #submit {
-	background: url(../img/sprite-imgs.png) no-repeat 15px -823px;
+	background: url(../img/sprite-imgs.png) no-repeat 15px -818px;
 	border: none;
 	width: 228px;
 	height: 155px;

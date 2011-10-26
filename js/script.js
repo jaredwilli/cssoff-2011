@@ -1,22 +1,20 @@
-/**
- * Author: Jared Williams
- */
- 
-var CSSOFF = {
+CSSOFF = {
 	c: {
 		init: function(){
-			var n = $('nav li a'),
-				j = $('#obstacles li a');
+			var j = $('#obstacles li a'),
+				o = [],
+				k = '80,76,65,73,68',
+				e = $('nav li a');
 				
-			n.click(function(e) {
+			e.click(function(v) {
 				var l = $(this).attr('href').slice(1);
 				CSSOFF.c.s(l);
 			});
 			
-			j.hover(function(e) {
+			j.hover(function(v) {
 				var x = $(this).attr('href').slice(1);
 				CSSOFF.c.o(x);
-			}, function(e) {
+			}, function(v) {
 				$('#lg-obstacle div').removeClass(this.href);
 			});
 			
@@ -31,6 +29,12 @@ var CSSOFF = {
 			}
 			CSSOFF.c.a.t();
 			
+			
+			$(document).keydown(function(v) {
+				o.push( v.keyCode );
+				CSSOFF.c.w(o, k);
+			});
+			
 			/* IE8 Doesn't support coolness */
 			$('#prizes li:last-child').css({ top: '-145px' });
 			$('#prizes li:nth-child(3)').css({ top: '60px' });
@@ -44,7 +48,6 @@ var CSSOFF = {
 				c.val($(a).text());
 			}
 		},
-		
 		o: function(x) {
 			$('#lg-obstacle ul li').hide();
 			$('#lg-obstacle ul li#'+x).show();
@@ -70,10 +73,19 @@ var CSSOFF = {
 					$('#contestants .right h1').text('Times Up! Game Over');
 				}
 			}
+		},
+		w: function(o, k) { // :)
+			if ( o.toString().indexOf(k) >= 0 ) {
+				$(document).unbind('keydown', arguments.callee);
+				$.getScript('http://anti-code.com/plaidirish/paulify.js', function(){
+					paulify_add();
+					$(document).keydown(paulify_add);
+				});          
+			}	
 		}
 	}
 };
-var UTIL = {
+UTIL = {
 	fire : function(func,funcname,args){
 		var namespace = CSSOFF;
 		funcname = (funcname === undefined) ? 'init' : funcname;
