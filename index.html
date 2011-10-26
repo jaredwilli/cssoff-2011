@@ -109,10 +109,20 @@
 						<input type="email" id="email" name="email" placeholder="Email Address" required>
 					<label for="team-name">Team Name</label>
 						<input type="text" id="team-name" name="team-name" placeholder="Team Name" required>
-					<label for="team-color">Team Color</label>
-						<input type="color" id="team-color" name="team-color" placeholder="Team Color" required>
-					<label for="gender">Gender</label>
-						<input type="text" id="gender" name="gender" placeholder="Gender" required>
+					<select id="team-color" name="team-color">
+						<option>Team Color</option>
+						<option value="blue">Blue</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="red">Red</option>
+						<option value="purple">Purple</option>
+						<option value="orange">Orange</option>						
+					</select>
+					<select id="gender" name="gender">
+						<option>Gender</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
 					<label for="photo-url">Profile Photo URL</label>
 						<input type="url" id="photo-url" name="photo-url" placeholder="Profile Photo URL" required>
 					<button id="submit" name="submit">Submit Entry!</button>

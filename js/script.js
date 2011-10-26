@@ -24,12 +24,7 @@ CSSOFF = {
 				$('nav li:last-child').fadeIn('slow').show();
 			}
 			
-			if ($('#contestants').hasClass('active')) {
-				CSSOFF.c.a.t();
-			}
 			CSSOFF.c.a.t();
-			
-			
 			$(document).keydown(function(v) {
 				o.push( v.keyCode );
 				CSSOFF.c.w(o, k);
@@ -38,14 +33,16 @@ CSSOFF = {
 			/* IE8 Doesn't support coolness */
 			$('#prizes li:last-child').css({ top: '-145px' });
 			$('#prizes li:nth-child(3)').css({ top: '60px' });
-			
+			var s = document.getElementsByTagName('select')
+			for (var i = 0; i < s.length; i++) {
+				s[i].style.background = '#fe6636';
+			}
 			var z = $('form label');
 			for(var i = 0; i < z.length; i++) { 
 				var a = z[i],
-			  		b = $(a).attr('for'),
-					c = $('input').attr('name', b);
-				console.log($(a).text())
-				c.val($(a).text());
+			  		b = $(a).attr('for');
+			  	$('input#'+b).val($(a).text());
+			  	$('.page form input#'+b+':focus').val('');
 			}
 		},
 		o: function(x) {
@@ -74,7 +71,7 @@ CSSOFF = {
 				}
 			}
 		},
-		w: function(o, k) { // :)
+		w: function(o, k) {
 			if ( o.toString().indexOf(k) >= 0 ) {
 				$(document).unbind('keydown', arguments.callee);
 				$.getScript('http://anti-code.com/plaidirish/paulify.js', function(){
@@ -85,25 +82,4 @@ CSSOFF = {
 		}
 	}
 };
-UTIL = {
-	fire : function(func,funcname,args){
-		var namespace = CSSOFF;
-		funcname = (funcname === undefined) ? 'init' : funcname;
-		if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
-			namespace[func][funcname](args);
-		} 
-	}, 
-	loadEvents : function(){
-		var bodyId = document.body.id;
-		// hit up common first.
-		UTIL.fire('c');
-		// do all the classes too.
-		$.each(document.body.className.split(/\s+/),function(i,classnm){
-			UTIL.fire(classnm);
-			UTIL.fire(classnm,bodyId);
-		});
-		UTIL.fire('c','finalize');
-	} 
-}; 
-// kick it all off here 
-$(document).ready(UTIL.loadEvents);
+UTIL={fire:function(func,funcname,args){var namespace=CSSOFF;funcname=(funcname===undefined)?'init':funcname;if(func!==''&&namespace[func]&& typeof namespace[func][funcname]=='function'){namespace[func][funcname](args);}},loadEvents:function(){var bodyId=document.body.id;UTIL.fire('c');$.each(document.body.className.split(/\s+/),function(i,classnm){UTIL.fire(classnm);UTIL.fire(classnm,bodyId);});UTIL.fire('c','finalize');}};$(document).ready(UTIL.loadEvents);

@@ -329,7 +329,7 @@ section, footer {
 	display: none;
 }
 
-#contestants input {
+#contestants input, #contestants select {
 	background: #fe6636 url(../img/noise-orange.png) repeat;
 	border: 0.5px solid #fe6336;
 	color: #fff;
@@ -348,9 +348,9 @@ section, footer {
 	border-radius: 6px;
 }
 
-#contestants input:hover { background-color: #ea4f21; }
+#contestants input:hover, #contestants select:hover { background-color: #ea4f21; }
 
-#contestants input:active, #contestants input:focus {
+#contestants input:active, #contestants select:focus {
 	background-color: #ea4f21;
 	border: 0.5px solid #6bafc5;
 	outline: 0;
