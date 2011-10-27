@@ -17,7 +17,13 @@ CSSOFF = {
 			}, function(v) {
 				$('#lg-obstacle div').removeClass(this.href);
 			});
-						
+			
+			if ($('#home').hasClass('.active')) {
+				$('nav li:last-child').fadeOut('slow').hide();
+			} else {
+				$('nav li:last-child').fadeIn('slow').show();
+			}
+			
 			CSSOFF.c.a.t();
 			$(document).keydown(function(v) {
 				o.push( v.keyCode );
@@ -31,46 +37,13 @@ CSSOFF = {
 			for (var i = 0; i < s.length; i++) {
 				s[i].style.background = '#fe6636';
 			}
-
 			var z = $('form label');
-			for (var i = 0; i < z.length; i++) { 
+			for(var i = 0; i < z.length; i++) { 
 				var a = z[i],
-			  		b = $(a).attr('for'),
-					c = $('input#'+ b),
-					obj = {
-						id: c.attr('id'), 
-						val: c.val($(a).text())
-					};
-				
-			  	CSSOFF.c.y(obj);
-				
-				c.focus(function(e) {
-					this.value = '';
-				}).blur(function(e) {
-					console.log($(a).attr('for', this.id).text())
-					this.value = $(a).attr('for', this.id).text();
-				});
-				
+			  		b = $(a).attr('for');
+			  	$('input#'+b).val($(a).text());
+			  	$('.page form input#'+b+':focus').val('');
 			}
-			
-			if (!$.browser.opera) {
-				$('select.select').each(function() {
-					var f = $(this).attr('title');
-					if ($('option:selected', this).val() != '') {
-						f = $('option:selected',this).text();
-					}
-					$(this).css({ zIndex: 10, opacity: 0, '-khtml-appearance': 'none' })
-						.after('<div class="select"><span>'+f+'</span></div>')
-						.change(function(e) {
-							var b = $('option:selected', this).text();
-							$(this).next().html('<span>'+b+'</span>');
-						});
-				});
-			};
-		},
-		y: function(obj) {
-			console.log(obj.id, obj.val)
-	
 		},
 		o: function(x) {
 			$('#lg-obstacle ul li').hide();
