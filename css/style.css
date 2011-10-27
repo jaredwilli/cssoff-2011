@@ -110,12 +110,11 @@ header .page, section .page, footer {
 }
 
 section h1 {
+	background: url(../img/sprite-imgs.png) no-repeat;
 	color: #fff;
 	font-size: 40px;
 	font-family: KomikaTitle-Regular, Arial, Helvetica, sans-serif;
 	text-shadow: 2px 2px rgba(0,0,0,0.2), 4px 4px rgba(0,0,0,0.2);
-	background-image: url(../img/sprite-imgs.png);
-	background-repeat: no-repeat;
 	display: block;
 	width: auto;
 	letter-spacing: 1.8px;
@@ -128,7 +127,11 @@ section, footer {
 
 /* Page Specific Styles */
 
-#home { background: url(../img/noise-blue.png) repeat, url(../img/splash.png) no-repeat center center; }
+#home {
+	background: url(../img/noise-blue.png) repeat, 
+				url(../img/splash.png) no-repeat center center; 
+}
+
 #home .page { height: 714px; }
 
 #home h1 {
@@ -228,7 +231,6 @@ section, footer {
 	float: right;
 }
 
-
 #lg-obstacle ul li, #lg-obstacle ul li:hover {
 	background: url(../img/sprite-imgs.png) no-repeat -246px -817px;
 	width: 400px;
@@ -241,9 +243,8 @@ section, footer {
 	top: 20px
 }
 
-#lg-obstacle ul li#tank {
-	display: block;
-}
+#lg-obstacle ul li#tank { display: block; }
+
 #lg-obstacle li h2, #lg-obstacle li h3 {
 	position: relative;
 	text-align: center;
@@ -262,18 +263,17 @@ section, footer {
 	font-size: 40px;
 	top: 10px;
 }
-#lg-obstacle ul li h3 {
-	font-size: 22px;
-}
+
+#lg-obstacle ul li h3 { font-size: 22px; }
 
 #lg-obstacle div {
-	background-image: url(../img/sprite-obstacles.png);
-	background-repeat: no-repeat;
+	background-image: url(../img/sprite-obstacles.png) no-repeat;
 	position: absolute;
 	width: 100%;
 	height: 461px;
 	bottom: 0;
 }
+
 .tank { background-position: 0 110px; }
 .slide { background-position: 0 -435px; }
 .wheel { background-position: right -540px; }
@@ -350,7 +350,8 @@ section, footer {
 
 #contestants input:hover, #contestants select:hover { background-color: #ea4f21; }
 
-#contestants input:active, #contestants select:focus {
+#contestants input:active, #contestants input:focus, 
+#contestants select:active, #contestants select:focus {
 	background-color: #ea4f21;
 	border: 0.5px solid #6bafc5;
 	outline: 0;
@@ -365,6 +366,10 @@ section, footer {
 	float: left;
 	font-size: 16px;
 	font-family: KomikaTitle-Regular, Arial, Helvetica, sans-serif;
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 #contestants form select.select {
@@ -372,26 +377,43 @@ section, footer {
     z-index: 10;
 }
 
-#team-color select { width: 225px; display: inline-block; }
-#team-color span.select {
-	background: url(../img/sprite-imgs.png) no-repeat -6px -1008px;
+#contestants form .select span {
+	position: relative;
+	top: 15px;
+	left: 15px;
+}
+
+#team-color select {
+	width: 215px;
+	display: inline-block;
+}
+
+#team-color div.select {
+	background: #FE6636 url(../img/sprite-imgs.png) no-repeat 0 -1008px;
 	position: absolute;
 	bottom: 9px;
-	right: 0;
-	z-index: 10;
-	width: 220px;
+	left: 0px;
+	z-index: 3;
+	width: 225px;
 	height: 50px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 #gender select { width: 155px; left: 20px; }
-#gender span.select {
-	background: url(../img/sprite-imgs.png) no-repeat -75px -1008px;
+
+#gender div.select {
+	background: #fe6636 url(../img/sprite-imgs.png) no-repeat -65px -1008px;
 	position: absolute;
 	bottom: 9px;
-	z-index: 10;
-	width: 151px;
+	z-index: 3;
+	width: 161px;
 	height: 50px;
 	left: 24px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 #contestants form #submit {

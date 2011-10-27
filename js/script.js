@@ -1,18 +1,3 @@
-$(function(){	
-	if (!$.browser.opera) {
-		$('select.select').each(function(){
-			var title = $(this).attr('title');
-			if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
-			$(this).css({'z-index':10,'-khtml-appearance':'none'})
-                .after('<span class="select">' + title + '</span>')
-                .change(function(){
-                    val = $('option:selected',this).text();
-                    $(this).next().text(val);
-				});
-		});
-	};
-});
-
 CSSOFF = {
 	c: {
 		init: function(){
@@ -32,13 +17,7 @@ CSSOFF = {
 			}, function(v) {
 				$('#lg-obstacle div').removeClass(this.href);
 			});
-			
-			if ($('#home').hasClass('.active')) {
-				$('nav li:last-child').fadeOut('slow').hide();
-			} else {
-				$('nav li:last-child').fadeIn('slow').show();
-			}
-			
+						
 			CSSOFF.c.a.t();
 			$(document).keydown(function(v) {
 				o.push( v.keyCode );
@@ -52,13 +31,36 @@ CSSOFF = {
 			for (var i = 0; i < s.length; i++) {
 				s[i].style.background = '#fe6636';
 			}
+
 			var z = $('form label');
-			for(var i = 0; i < z.length; i++) { 
+			for (var i = 0; i < z.length; i++) { 
 				var a = z[i],
-			  		b = $(a).attr('for');
-			  	$('input#'+b).val($(a).text());
-			  	$('.page form input#'+b+':focus').val('');
+			  		b = $(a).attr('for'),
+					c = $('input#'+b);
+				c.val($(a).text());
+			  	console.log(c.val())
+				c.focus(function(e) {
+					this.value = '';
+				});
+				c.blur(function(e) {
+					this.value = $(a).text();
+				});
 			}
+			
+			if (!$.browser.opera) {
+				$('select.select').each(function() {
+					var f = $(this).attr('title');
+					if ($('option:selected', this).val() != '') {
+						f = $('option:selected',this).text();
+					}
+					$(this).css({ zIndex: 10, opacity: 0, '-khtml-appearance': 'none' })
+						.after('<div class="select"><span>'+f+'</span></div>')
+						.change(function(e) {
+							var b = $('option:selected', this).text();
+							$(this).next().html('<span>'+b+'</span>');
+						});
+				});
+			};
 		},
 		o: function(x) {
 			$('#lg-obstacle ul li').hide();
