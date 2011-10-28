@@ -58,24 +58,6 @@ body {
 	position: relative;
 }
 
-nav:hover {
-  -webkit-animation: myanim 2s infinite; /* Saf5, Chrome */
-     -moz-animation: myanim 2s infinite; /* FF5+ */
-      -ms-animation: myanim 2s infinite; /* IE10pp3 */
-}
-@-webkit-keyframes myanim { 
-	50%  { opacity: 0.5; }
-	100% { opacity: 1.0; }
-}
-@-moz-keyframes myanim { 
-	50%  { opacity: 0.5; }
-	100% { opacity: 1.0; }
-}
-@-ms-keyframes myanim {
-	50%  { opacity: 0.5; }
-	100% { opacity: 1.0; }
-}
-
 nav {
 	background-image: url(../img/bg-nav.png); /* IE FIX */
 	background-repeat: repeat-x;
@@ -532,21 +514,25 @@ footer h2 {
 footer p { font-weight: bold; }
 
 footer .left {
-	float: left;
-	text-align: right;
-	width: auto;
-	display: inline-block;
+    float: left;
+    text-align: right;
+    width: auto;
+    display: inline-block;
 }
 
 footer .right {
-	float: right;
-	width: auto;
-	display: inline-block;
+    float: right;
+    width: auto;
+    display: inline-block;
 }
 
 footer .address {
 	width: 310px;
 	margin: 0 auto;
+	float: left;
+	text-align: right;
+	width: auto;
+	display: inline-block;
 }
 
 

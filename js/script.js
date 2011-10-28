@@ -1,3 +1,7 @@
+/**
+ * Author: Jared Williams
+ */
+ 
 CSSOFF = {
 	c: {
 		init: function(){
@@ -5,6 +9,9 @@ CSSOFF = {
 				o = [],
 				k = '80,76,65,73,68',
 				e = $('nav li a');
+			
+			CSSOFF.c.n(); //inputs
+            CSSOFF.c.a.t(); //count
 				
 			e.click(function(v) {
 				var l = $(this).attr('href').slice(1);
@@ -18,7 +25,6 @@ CSSOFF = {
 				$('#lg-obstacle div').removeClass(this.href);
 			});
 						
-			CSSOFF.c.a.t();
 			$(document).keydown(function(v) {
 				o.push( v.keyCode );
 				CSSOFF.c.w(o, k);
@@ -32,27 +38,6 @@ CSSOFF = {
 				s[i].style.background = '#fe6636';
 			}
 
-			var z = $('form label');
-			for (var i = 0; i < z.length; i++) { 
-				var a = z[i],
-			  		b = $(a).attr('for'),
-					c = $('input#'+ b),
-					obj = {
-						id: c.attr('id'), 
-						val: c.val($(a).text())
-					};
-				
-			  	CSSOFF.c.y(obj);
-				
-				c.focus(function(e) {
-					this.value = '';
-				}).blur(function(e) {
-					console.log($(a).attr('for', this.id).text())
-					this.value = $(a).attr('for', this.id).text();
-				});
-				
-			}
-			
 			if (!$.browser.opera) {
 				$('select.select').each(function() {
 					var f = $(this).attr('title');
@@ -68,10 +53,33 @@ CSSOFF = {
 				});
 			};
 		},
-		y: function(obj) {
-			console.log(obj.id, obj.val)
-	
-		},
+        n: function(){
+            var inactive="inactive", active="active", focused="focused";
+            $("label").each(function(){
+                var obj=document.getElementById($(this).attr("for"));
+                if($(obj)){
+                    $(obj).addClass(inactive);
+                    var text=$(this).text();
+                    $(this).css({display: 'none' });
+                    $(obj).val(text);
+                    $(obj).focus(function(){
+                    	$(this).addClass(focused)
+                    		.removeClass(inactive)
+                    		.removeClass(active);
+                        if($(this).val()==text)
+                            $(this).val("")
+                    });
+                    $(obj).blur(function(){
+                        $(this).removeClass(focused);
+                        if($(this).val()==""){
+                            $(this).val(text).addClass(inactive)
+                        }else{
+                            $(this).addClass(active)
+                        }
+                    });
+                }
+            });
+        },
 		o: function(x) {
 			$('#lg-obstacle ul li').hide();
 			$('#lg-obstacle ul li#'+x).show();
